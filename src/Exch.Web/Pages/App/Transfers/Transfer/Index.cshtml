@@ -1,0 +1,57 @@
+@page
+@using Exch.Permissions
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Exch.Web.Pages.App.Transfers.Transfer
+@using Exch.Localization
+@using Exch.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<ExchResource> L
+@inject IAuthorizationService Authorization
+@{
+    PageLayout.Content.Title = L["Transfer"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Transfer"].Value);
+    PageLayout.Content.MenuItemName = ExchMenus.Transfer;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/App/Transfers/Transfer/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/App/Transfers/Transfer/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["Transfer"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-end">
+			    @if (await Authorization.IsGrantedAsync(ExchPermissions.Transfer.Create))
+                {
+                <abp-button id="NewTransferButton"
+                            text="@L["CreateTransfer"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-row class="mb-3">
+            <a abp-collapse-id="TransferCollapse" class="text-secondary">@L["TableFilter"] </a>
+        </abp-row>
+        <abp-dynamic-form abp-model="TransferFilter" id="TransferFilter" required-symbols="false" column-size="_3">
+            <abp-collapse-body id="TransferCollapse">
+                <abp-form-content />
+            </abp-collapse-body>
+        </abp-dynamic-form>
+        <hr />
+        <abp-table striped-rows="true" id="TransferTable" class="nowrap"/>
+    </abp-card-body>
+</abp-card>

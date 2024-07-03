@@ -1,0 +1,21 @@
+{
+  "culture": "hu",
+  "texts": {
+    "Menu:Home": "Kezdőlap",
+    "Welcome": "Üdvözlöm",
+    "LongWelcomeMessage": "Üdvözöljük az alkalmazásban. Ez egy ABP keretrendszeren alapuló startup projekt. További információkért látogasson el az abp.io oldalra.",
+    "Permission:Transfer": "Transfer",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:Transfer": "MenuTransfer",
+    "Transfer": "Transfer",
+    "TransferName": "TransferName",
+    "TransferSlug": "TransferSlug",
+    "CreateTransfer": "CreateTransfer",
+    "EditTransfer": "EditTransfer",
+    "TransferDeletionConfirmationMessage": "Are you sure to delete the transfer {0}?",
+    "SuccessfullyDeleted": "Successfully deleted",
+    "TableFilter": "TableFilter"
+  }
+}

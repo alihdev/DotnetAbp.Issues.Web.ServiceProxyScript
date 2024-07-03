@@ -1,0 +1,21 @@
+{
+  "culture": "zh-Hant",
+  "texts": {
+    "Menu:Home": "首頁",
+    "Welcome": "歡迎",
+    "LongWelcomeMessage": "歡迎來到此應用程式. 這是一個基於ABP框架的起始專案. 有關更多訊息, 請瀏覽 abp.io.",
+    "Permission:Transfer": "Transfer",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:Transfer": "MenuTransfer",
+    "Transfer": "Transfer",
+    "TransferName": "TransferName",
+    "TransferSlug": "TransferSlug",
+    "CreateTransfer": "CreateTransfer",
+    "EditTransfer": "EditTransfer",
+    "TransferDeletionConfirmationMessage": "Are you sure to delete the transfer {0}?",
+    "SuccessfullyDeleted": "Successfully deleted",
+    "TableFilter": "TableFilter"
+  }
+}
