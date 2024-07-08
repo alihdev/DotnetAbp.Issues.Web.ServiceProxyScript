@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 
-namespace Exch.Controllers.App.Transfers;
+namespace Exch.Web.Controllers.App.Transfers;
 
 public class TransferController(ITransferAppService transferAppService) : AppController
 {

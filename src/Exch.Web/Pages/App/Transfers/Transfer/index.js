@@ -21,7 +21,7 @@ $(function () {
 
     var l = abp.localization.getResource('Exch');
 
-    var service = exch.controllers.app.transfers.transfer;
+    var service = exch.web.controllers.app.transfers.transfer;
     var createModal = new abp.ModalManager(abp.appPath + 'App/Transfers/Transfer/CreateModal');
     var editModal = new abp.ModalManager(abp.appPath + 'App/Transfers/Transfer/EditModal');
 
